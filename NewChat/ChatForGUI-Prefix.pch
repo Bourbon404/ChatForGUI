@@ -1,0 +1,38 @@
+//
+// Prefix header for all source files of the 'NewChat' target in the 'NewChat' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+
+    #import "UserAndMessageDatabase.h"
+    #import "UserAndMessageManager.h"
+    #import "AppDelegate.h"
+
+
+    //系统版本和屏幕尺寸
+    #define ScreenSize [[[UIScreen mainScreen] currentMode] size].height
+    #define iOS7 ([[[UIDevice currentDevice] systemVersion] floatValue] >=7.0)
+    #define iOS6 (([[[UIDevice currentDevice] systemVersion] floatValue] >=6.0) && ([[[UIDevice currentDevice] systemVersion] floatValue] <7.0))
+    #define iOS5 (([[[UIDevice currentDevice] systemVersion] floatValue] >=5.0) && ([[[UIDevice currentDevice] systemVersion] floatValue] <6.0))
+    #define iOS4 (([[[UIDevice currentDevice] systemVersion] floatValue] >=4.0) && ([[[UIDevice currentDevice] systemVersion] floatValue] <5.0))
+
+#include "ChatDefine.h"
+#import "ChatAdapter.h"
+#import "EventDelegate.h"
+
+
+
+
+
+
+
+
+#endif
